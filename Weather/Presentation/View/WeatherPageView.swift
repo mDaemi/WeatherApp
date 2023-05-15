@@ -78,16 +78,24 @@ struct WeatherPageView: View {
                             }
                     }
                 } else {
+                    if !fetchDataFailed {
+                        List {
+                            ForEach(vm.weather.indices, id: \.self) { index in
+                                let cell = vm.weather[index]
+                                WeatherDataCell(vm: WeatherDataCellViewModel(
+                                    cityName: cell.cityName,
+                                    temp: cell.temp, clouds: cell.clouds))
+                            }
+                        }.listStyle(PlainListStyle())
+                            .padding()
+                    }
+                    
+                    Spacer()
                     ButtonStyle {
                         Button(localized("weatherPage.restart")) {
                             showProgressView = true
                         }
-                    }.padding(.top, 64)
-                    Spacer()
-                    
-                    if !fetchDataFailed {
-                        
-                    }
+                    }.padding(.bottom, 8)
                 }
                 
                 if fetchDataFailed {

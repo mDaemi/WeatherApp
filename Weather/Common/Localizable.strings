@@ -21,3 +21,4 @@
 "weatherPage.service" = "Il y a un problème. Veuillez réessayer plus tard.";
 "weatherPage.restart" = "Recommencer";
 "weatherPage.back" = "Retour";
+"weatherPage.temperature" = "Temperature";
