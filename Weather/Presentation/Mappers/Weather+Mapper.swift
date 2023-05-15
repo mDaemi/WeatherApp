@@ -11,7 +11,7 @@ extension Weather {
     func toPresentation() -> WeatherUIModel {
         return WeatherUIModel(cityName: self.name,
                               temp: (self.temp?.temp != nil) ?
-                              // It is better to avoid force unwrap ! 
+                              // TODO: change force unwrap !
                               convertTemperature(temp: self.temp!.temp!,
                                                  from: .kelvin,
                                                  to: .celsius) : nil,

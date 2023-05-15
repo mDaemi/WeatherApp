@@ -21,8 +21,9 @@ struct WeatherPageView: View {
     // MARK: - Body
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [.green, .white]), startPoint: .top, endPoint: .bottom)
+            LinearGradient(gradient: Gradient(colors: [.gray, .white]), startPoint: .top, endPoint: .bottom)
                 .edgesIgnoringSafeArea(.all)
+            
             VStack(spacing: 48) {
                 if showProgressView {
                     Text(loadingMessage)
@@ -31,7 +32,7 @@ struct WeatherPageView: View {
                         .frame(alignment: .center)
                         .frame(maxWidth: .infinity)
                         .lineSpacing(8)
-                        .padding(8)
+                        .padding()
                     
                     ZStack {
                         ProgressView(value: value, total: loadingTime)
@@ -86,11 +87,12 @@ struct WeatherPageView: View {
                                     cityName: cell.cityName,
                                     temp: cell.temp, clouds: cell.clouds))
                             }
-                        }.listStyle(PlainListStyle())
+                        }
+                        .listStyle(PlainListStyle())
                             .padding()
+                            .frame(maxHeight: .infinity)
                     }
                     
-                    Spacer()
                     ButtonStyle {
                         Button(localized("weatherPage.restart")) {
                             showProgressView = true

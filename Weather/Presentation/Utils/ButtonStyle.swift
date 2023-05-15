@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct ButtonStyle<Content>: View where Content: View {
+    // MARK: - Properties
     var views: Content
     
+    // MARK: - init
     init(@ViewBuilder content: () -> Content) {
         self.views = content()
     }
     
+    // MARK: - body
     var body: some View {
         Group {
             views.foregroundColor(.white)

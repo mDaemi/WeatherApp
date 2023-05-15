@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct WeatherDataCell: View {
+    // MARK: - Properties
     @ObservedObject var vm: WeatherDataCellViewModel
     
+    // MARK: - body
     var body: some View {
         Group {
             HStack(spacing: 8) {
@@ -17,6 +19,8 @@ struct WeatherDataCell: View {
                     Text(vm.cityName)
                         .foregroundColor(.primary)
                         .font(.system(size: 13, weight: .bold))
+                        .frame(maxWidth: .infinity)
+                        .frame(alignment: .leading)
                     if let temp = vm.temp {
                         Text("\(localized("weatherPage.temperature")): \(temp)")
                             .foregroundColor(.primary)
@@ -41,9 +45,7 @@ struct WeatherDataCell: View {
                             .scaledToFit()
                     }
                 }
-                
             }
-        }.background(.clear)
-            .frame(height: 50)
+        }.frame(height: 50)
     }
 }

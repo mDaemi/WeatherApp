@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct GaugeProgressStyle: ProgressViewStyle {
+    // MARK: - Properties
     var strokeColor = Color.blue
     var strokeWidth = 25.0
 
+    // MARK: - Internal
     func makeBody(configuration: Configuration) -> some View {
         let fractionCompleted = configuration.fractionCompleted ?? 0
 

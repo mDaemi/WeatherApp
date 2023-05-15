@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct SnackView: View {
+    // MARK: - Properties
     var message: String
     var bgColor: Color
     var onUpdate: (() -> Void) = {}
     @State var haveRetryButton: Bool = false
     
+    // MARK: - body
     var body: some View {
         HStack {
             Text(message)

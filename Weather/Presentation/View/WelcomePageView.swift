@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct WelcomePageView: View {
+    // MARK: - Properties
     @State private var shouldNavigate = false
     
+    // MARK: - body
     var body: some View {
         GeometryReader { geometry in
             ZStack {
@@ -25,6 +27,7 @@ struct WelcomePageView: View {
                         .lineSpacing(16)
                         .frame(alignment: .center)
                     
+                    // TODO: Make all button area clickable
                     ButtonStyle {
                         Button(localized("welcomePage.button")) {
                             shouldNavigate = true
