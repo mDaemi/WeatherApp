@@ -10,7 +10,8 @@ import Foundation
 extension Weather {
     func toPresentation() -> WeatherUIModel {
         return WeatherUIModel(cityName: self.name,
-                              temp: self.temp?.temp,
+                              temp: (self.temp?.temp != nil) ?
+                              String(format: "%.2f", self.temp!.temp!) : nil,
                               clouds: self.clouds?.all)
     }
 }

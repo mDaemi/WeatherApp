@@ -8,17 +8,22 @@
 import SwiftUI
 
 struct WeatherPageView: View {
+    
+    // MARK: - Properties
+    @StateObject private var vm = WeatherViewModel()
     @State private var value : Float = 0
     @State private var loadingMessage: String = localized("weatherPage.message1")
-    @State private var restart: Bool = true
+    @State private var showProgressView: Bool = true
+    @State private var fetchDataFailed = false
     let loadingTime: Float = 60
     
+    // MARK: - Body
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [.green, .white]), startPoint: .top, endPoint: .bottom)
                 .edgesIgnoringSafeArea(.all)
             VStack(spacing: 48) {
-                if restart {
+                if showProgressView {
                     Text(loadingMessage)
                         .foregroundColor(.primary)
                         .font(.system(size: 18, weight: .bold))
@@ -39,26 +44,75 @@ struct WeatherPageView: View {
                             )
                             .onAppear {
                                 Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
-                                    value += 1
                                     
+                                    if value == 0 {
+                                        fetchData(for: "Rennes")
+                                    } else if value == 10 {
+                                        fetchData(for: "Paris")
+                                    } else if value == 20 {
+                                        fetchData(for: "Nantes")
+                                    } else if value == 30 {
+                                        fetchData(for: "Bordeaux")
+                                    } else if value == 40 {
+                                        fetchData(for: "Lyon")
+                                    }
+                                   
+                                    value += 1
                                     if Int(value).isMultiple(of: 6) {
                                         loadingMessage = getNextMessage(of: loadingMessage)
                                     }
-                                    
                                     if value == loadingTime {
+                                        if vm.weather.count == 5 {
+                                            fetchDataFailed = false
+                                            print("YooHoooooo")
+                                        } else {
+                                            fetchDataFailed = true
+                                        }
+                                        
                                         timer.invalidate()
-                                        restart = false
+                                        showProgressView = false
                                         value = 0
                                     }
                                 }
                             }
                     }
                 } else {
-                    Button("Start") {
-                        restart = true
+                    ButtonStyle {
+                        Button(localized("weatherPage.restart")) {
+                            showProgressView = true
+                        }
+                    }.padding(.top, 64)
+                    Spacer()
+                    
+                    if !fetchDataFailed {
+                        
                     }
                 }
+                
+                if fetchDataFailed {
+                    SnackView(message: localized("weatherPage.service"), bgColor: .red)
+                        .transition(.move(edge: .bottom))
+                        .onAppear {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                                withAnimation {
+                                    fetchDataFailed = false
+                                }
+                            }
+                        }
+                }
             }.padding()
+        }
+    }
+    
+    // MARK: - Private
+    private func fetchData(for city: String) {
+        Task {
+            do {
+                try await vm.getData(for: city)
+            } catch {
+                fetchDataFailed = true
+                showProgressView = false
+            }
         }
     }
     

@@ -9,6 +9,6 @@ import Foundation
 
 struct WeatherUIModel {
     var cityName: String
-    var temp: Double?
+    var temp: String?
     var clouds: Double?
 }

@@ -25,15 +25,11 @@ struct WelcomePageView: View {
                         .lineSpacing(16)
                         .frame(alignment: .center)
                     
-                    Button(localized("welcomePage.button")) {
-                        shouldNavigate = true
-                    }.foregroundColor(.white)
-                        .frame(maxWidth: .infinity,  alignment: .center)
-                        .frame(height: 48)
-                        .background(.green)
-                        .cornerRadius(8)
-                        .font(.system(size: 20, weight: .bold))
-                        .padding()
+                    ButtonStyle {
+                        Button(localized("welcomePage.button")) {
+                            shouldNavigate = true
+                        }
+                    }
                     Spacer()
                     
                     if shouldNavigate {
