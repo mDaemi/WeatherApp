@@ -11,8 +11,7 @@ struct WeatherPageView: View {
     @State private var value : Float = 0
     @State private var loadingMessage: String = localized("weatherPage.message1")
     @State private var restart: Bool = true
-    let loadingTime: Float = 20
-
+    let loadingTime: Float = 60
     
     var body: some View {
         ZStack {
@@ -27,7 +26,7 @@ struct WeatherPageView: View {
                         .frame(maxWidth: .infinity)
                         .lineSpacing(8)
                         .padding(8)
-
+                    
                     ZStack {
                         ProgressView(value: value, total: loadingTime)
                             .progressViewStyle(GaugeProgressStyle())
@@ -54,7 +53,6 @@ struct WeatherPageView: View {
                                 }
                             }
                     }
-                    
                 } else {
                     Button("Start") {
                         restart = true
@@ -79,22 +77,6 @@ struct WeatherPageView: View {
             }
         }
         return nextMessage
-    }
-}
-
-struct GaugeProgressStyle: ProgressViewStyle {
-    var strokeColor = Color.blue
-    var strokeWidth = 25.0
-
-    func makeBody(configuration: Configuration) -> some View {
-        let fractionCompleted = configuration.fractionCompleted ?? 0
-
-        return ZStack {
-            Circle()
-                .trim(from: 0, to: fractionCompleted)
-                .stroke(strokeColor, style: StrokeStyle(lineWidth: strokeWidth, lineCap: .round))
-                .rotationEffect(.degrees(-90))
-        }
     }
 }
 
