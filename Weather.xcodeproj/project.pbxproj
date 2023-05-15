@@ -24,6 +24,18 @@
 		DD4EBCB02A12146A0019C66F /* Weather+Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4EBCAF2A12146A0019C66F /* Weather+Mapper.swift */; };
 		DD4EBCB22A1214890019C66F /* CoordinateUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4EBCB12A1214890019C66F /* CoordinateUIModel.swift */; };
 		DD4EBCB42A12149C0019C66F /* WeatherUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4EBCB32A12149C0019C66F /* WeatherUIModel.swift */; };
+		DD4EBCB62A1216800019C66F /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4EBCB52A1216800019C66F /* UseCaseProvider.swift */; };
+		DD4EBCB82A1216AB0019C66F /* PAppRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4EBCB72A1216AB0019C66F /* PAppRepository.swift */; };
+		DD4EBCBA2A1216CA0019C66F /* AppUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4EBCB92A1216CA0019C66F /* AppUseCase.swift */; };
+		DD4EBCBC2A12179C0019C66F /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4EBCBB2A12179C0019C66F /* WeatherViewModel.swift */; };
+		DD4EBCC32A12183E0019C66F /* DataUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4EBCC22A12183E0019C66F /* DataUseCaseProvider.swift */; };
+		DD4EBCC52A12186E0019C66F /* AppRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4EBCC42A12186E0019C66F /* AppRepository.swift */; };
+		DD4EBCC72A12188E0019C66F /* AppDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4EBCC62A12188E0019C66F /* AppDataSource.swift */; };
+		DD4EBCC92A1218A80019C66F /* AbstractService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4EBCC82A1218A80019C66F /* AbstractService.swift */; };
+		DD4EBCCB2A1218BF0019C66F /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4EBCCA2A1218BF0019C66F /* AppService.swift */; };
+		DD4EBCCD2A1219C10019C66F /* WelcomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4EBCCC2A1219C10019C66F /* WelcomePageView.swift */; };
+		DD4EBCCF2A1219D70019C66F /* WeatherPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4EBCCE2A1219D70019C66F /* WeatherPageView.swift */; };
+		DD4EBCD12A121ADE0019C66F /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4EBCD02A121ADE0019C66F /* String+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +57,18 @@
 		DD4EBCAF2A12146A0019C66F /* Weather+Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Weather+Mapper.swift"; sourceTree = "<group>"; };
 		DD4EBCB12A1214890019C66F /* CoordinateUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateUIModel.swift; sourceTree = "<group>"; };
 		DD4EBCB32A12149C0019C66F /* WeatherUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUIModel.swift; sourceTree = "<group>"; };
+		DD4EBCB52A1216800019C66F /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
+		DD4EBCB72A1216AB0019C66F /* PAppRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAppRepository.swift; sourceTree = "<group>"; };
+		DD4EBCB92A1216CA0019C66F /* AppUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUseCase.swift; sourceTree = "<group>"; };
+		DD4EBCBB2A12179C0019C66F /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		DD4EBCC22A12183E0019C66F /* DataUseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUseCaseProvider.swift; sourceTree = "<group>"; };
+		DD4EBCC42A12186E0019C66F /* AppRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRepository.swift; sourceTree = "<group>"; };
+		DD4EBCC62A12188E0019C66F /* AppDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataSource.swift; sourceTree = "<group>"; };
+		DD4EBCC82A1218A80019C66F /* AbstractService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractService.swift; sourceTree = "<group>"; };
+		DD4EBCCA2A1218BF0019C66F /* AppService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppService.swift; sourceTree = "<group>"; };
+		DD4EBCCC2A1219C10019C66F /* WelcomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageView.swift; sourceTree = "<group>"; };
+		DD4EBCCE2A1219D70019C66F /* WeatherPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPageView.swift; sourceTree = "<group>"; };
+		DD4EBCD02A121ADE0019C66F /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +168,7 @@
 		DD4EBC922A1211A30019C66F /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				DD4EBCC42A12186E0019C66F /* AppRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -151,6 +176,7 @@
 		DD4EBC932A1211AE0019C66F /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				DD4EBCC62A12188E0019C66F /* AppDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -158,6 +184,8 @@
 		DD4EBC942A1211B60019C66F /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				DD4EBCC82A1218A80019C66F /* AbstractService.swift */,
+				DD4EBCCA2A1218BF0019C66F /* AppService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -165,6 +193,7 @@
 		DD4EBC952A1211BE0019C66F /* DI */ = {
 			isa = PBXGroup;
 			children = (
+				DD4EBCC22A12183E0019C66F /* DataUseCaseProvider.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -199,6 +228,7 @@
 		DD4EBC9D2A1212260019C66F /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				DD4EBCB92A1216CA0019C66F /* AppUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -206,6 +236,7 @@
 		DD4EBC9E2A1212330019C66F /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				DD4EBCB72A1216AB0019C66F /* PAppRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -213,6 +244,7 @@
 		DD4EBC9F2A12123A0019C66F /* DI */ = {
 			isa = PBXGroup;
 			children = (
+				DD4EBCB52A1216800019C66F /* UseCaseProvider.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -220,6 +252,9 @@
 		DD4EBCA42A1212870019C66F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DD4EBCCC2A1219C10019C66F /* WelcomePageView.swift */,
+				DD4EBCBB2A12179C0019C66F /* WeatherViewModel.swift */,
+				DD4EBCCE2A1219D70019C66F /* WeatherPageView.swift */,
 				DD4EBC742A120E350019C66F /* WeatherApp.swift */,
 				DD4EBC762A120E350019C66F /* ContentView.swift */,
 			);
@@ -229,6 +264,7 @@
 		DD4EBCA52A1212920019C66F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				DD4EBCD02A121ADE0019C66F /* String+Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -330,7 +366,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD4EBCB82A1216AB0019C66F /* PAppRepository.swift in Sources */,
+				DD4EBCBC2A12179C0019C66F /* WeatherViewModel.swift in Sources */,
 				DD4EBCAC2A1214180019C66F /* WeatherResponse+Mapper.swift in Sources */,
+				DD4EBCC32A12183E0019C66F /* DataUseCaseProvider.swift in Sources */,
+				DD4EBCB62A1216800019C66F /* UseCaseProvider.swift in Sources */,
+				DD4EBCCB2A1218BF0019C66F /* AppService.swift in Sources */,
+				DD4EBCD12A121ADE0019C66F /* String+Extension.swift in Sources */,
+				DD4EBCC92A1218A80019C66F /* AbstractService.swift in Sources */,
 				DD4EBCA32A1212630019C66F /* Weather.swift in Sources */,
 				DD4EBCA12A12124D0019C66F /* Coordinate.swift in Sources */,
 				DD4EBCAA2A1213FB0019C66F /* CoordinateResponse+Mapper.swift in Sources */,
@@ -338,10 +381,15 @@
 				DD4EBC772A120E350019C66F /* ContentView.swift in Sources */,
 				DD4EBCB22A1214890019C66F /* CoordinateUIModel.swift in Sources */,
 				DD4EBC9B2A1211FE0019C66F /* WeatherResponse.swift in Sources */,
+				DD4EBCCD2A1219C10019C66F /* WelcomePageView.swift in Sources */,
+				DD4EBCBA2A1216CA0019C66F /* AppUseCase.swift in Sources */,
 				DD4EBCAE2A1214480019C66F /* Coordinate+Mapper.swift in Sources */,
+				DD4EBCC72A12188E0019C66F /* AppDataSource.swift in Sources */,
 				DD4EBC752A120E350019C66F /* WeatherApp.swift in Sources */,
 				DD4EBC882A120F270019C66F /* AppError.swift in Sources */,
+				DD4EBCCF2A1219D70019C66F /* WeatherPageView.swift in Sources */,
 				DD4EBC902A1211810019C66F /* Constants.swift in Sources */,
+				DD4EBCC52A12186E0019C66F /* AppRepository.swift in Sources */,
 				DD4EBC992A1211E70019C66F /* CoordinateResponse.swift in Sources */,
 				DD4EBCB02A12146A0019C66F /* Weather+Mapper.swift in Sources */,
 			);
@@ -400,7 +448,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -454,7 +502,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
