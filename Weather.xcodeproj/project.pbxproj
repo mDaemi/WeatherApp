@@ -41,6 +41,7 @@
 		DD4EBCD72A1239C00019C66F /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4EBCD62A1239C00019C66F /* ButtonStyle.swift */; };
 		DD4EBCD92A123CF30019C66F /* WeatherDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4EBCD82A123CF30019C66F /* WeatherDataCell.swift */; };
 		DD4EBCDB2A123D2C0019C66F /* WeatherDataCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4EBCDA2A123D2C0019C66F /* WeatherDataCellViewModel.swift */; };
+		DD4EBCDD2A1240070019C66F /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4EBCDC2A1240070019C66F /* BackButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,7 @@
 		DD4EBCD62A1239C00019C66F /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		DD4EBCD82A123CF30019C66F /* WeatherDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataCell.swift; sourceTree = "<group>"; };
 		DD4EBCDA2A123D2C0019C66F /* WeatherDataCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataCellViewModel.swift; sourceTree = "<group>"; };
+		DD4EBCDC2A1240070019C66F /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,6 +281,7 @@
 				DD4EBCD22A1231E90019C66F /* GaugeProgressStyle.swift */,
 				DD4EBCD42A1236950019C66F /* SnackView.swift */,
 				DD4EBCD62A1239C00019C66F /* ButtonStyle.swift */,
+				DD4EBCDC2A1240070019C66F /* BackButton.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				DD4EBCC72A12188E0019C66F /* AppDataSource.swift in Sources */,
 				DD4EBC752A120E350019C66F /* WeatherApp.swift in Sources */,
 				DD4EBCD92A123CF30019C66F /* WeatherDataCell.swift in Sources */,
+				DD4EBCDD2A1240070019C66F /* BackButton.swift in Sources */,
 				DD4EBC882A120F270019C66F /* AppError.swift in Sources */,
 				DD4EBCCF2A1219D70019C66F /* WeatherPageView.swift in Sources */,
 				DD4EBC902A1211810019C66F /* Constants.swift in Sources */,

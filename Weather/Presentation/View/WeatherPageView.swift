@@ -10,6 +10,7 @@ import SwiftUI
 struct WeatherPageView: View {
     
     // MARK: - Properties
+    @Environment(\.presentationMode) var presentationMode
     @StateObject private var vm = WeatherViewModel()
     @State private var value : Float = 0
     @State private var loadingMessage: String = localized("weatherPage.message1")
@@ -56,7 +57,7 @@ struct WeatherPageView: View {
                                     } else if value == 40 {
                                         fetchData(for: "Lyon")
                                     }
-                                   
+                                    
                                     value += 1
                                     if Int(value).isMultiple(of: 6) {
                                         loadingMessage = getNextMessage(of: loadingMessage)
@@ -101,6 +102,13 @@ struct WeatherPageView: View {
                         }
                 }
             }.padding()
+                .navigationBarBackButtonHidden(true)
+                .navigationBarItems(leading:
+                                        Button(action: {
+                    presentationMode.wrappedValue.dismiss()
+                }, label: {
+                    BackButton()
+                }))
         }
     }
     
