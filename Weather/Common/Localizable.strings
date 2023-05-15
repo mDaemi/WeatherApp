@@ -7,13 +7,15 @@
 */
 
 /*******************************************************************************
- // MARK: -                          COMMON
- ******************************************************************************/
-
-"error.service" = "Il y a un problème. Veuillez réessayer plus tard.";
-
-/*******************************************************************************
  // MARK: -                          Welcome page
  ******************************************************************************/
 "welcomePage.title" = "Bienvenue sur l'application météo. Pour connaître la météo de Rennes, Paris, Nantes, Bordeaux et Lyon, cliquez sur le bouton ci-dessous.";
 "welcomePage.button" = "Let's go!";
+
+/*******************************************************************************
+ // MARK: -                          Weather page
+ ******************************************************************************/
+"weatherPage.message1" = "Nous téléchargeons les données…";
+"weatherPage.message2" = "C’est presque fini…";
+"weatherPage.message3" = "Plus que quelques secondes avant d’avoir le résultat…";
+"weatherPage.service" = "Il y a un problème. Veuillez réessayer plus tard.";
