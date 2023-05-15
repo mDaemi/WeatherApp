@@ -16,4 +16,4 @@
  // MARK: -                          Welcome page
  ******************************************************************************/
 "welcomePage.title" = "Bienvenue sur l'application météo. Pour connaître la météo de Rennes, Paris, Nantes, Bordeaux et Lyon, cliquez sur le bouton ci-dessous.";
-"welcomePage.button" = "Lets go!";
+"welcomePage.button" = "Let's go!";

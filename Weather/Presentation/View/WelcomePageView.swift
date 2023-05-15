@@ -8,27 +8,44 @@
 import SwiftUI
 
 struct WelcomePageView: View {
+    @State private var shouldNavigate = false
     
     var body: some View {
-        ZStack {
-            LinearGradient(gradient: Gradient(colors: [.green, .white]), startPoint: .top, endPoint: .bottom)
-                .edgesIgnoringSafeArea(.all)
-            
-            VStack(spacing: 56) {
-                Text(localized("title.welcomePage"))
-                    .foregroundColor(.primary)
-                    .font(.system(size: 20))
-                    .padding(.horizontal, 24)
-                    .padding(.top, 100)
-                    .lineSpacing(8)
-                    .frame(alignment: .center)
+        GeometryReader { geometry in
+            ZStack {
+                LinearGradient(gradient: Gradient(colors: [.green, .white]), startPoint: .top, endPoint: .bottom)
+                    .edgesIgnoringSafeArea(.all)
                 
-                Button(localized("welcomePage.button")) {
+                VStack(spacing: 56) {
+                    Text(localized("welcomePage.title"))
+                        .foregroundColor(.primary)
+                        .font(.system(size: 20))
+                        .padding(.horizontal, 24)
+                        .padding(.top, geometry.size.height*0.2)
+                        .lineSpacing(16)
+                        .frame(alignment: .center)
                     
+                    Button(localized("welcomePage.button")) {
+                        shouldNavigate = true
+                    }.foregroundColor(.white)
+                        .frame(maxWidth: .infinity,  alignment: .center)
+                        .frame(height: 48)
+                        .background(.green)
+                        .cornerRadius(8)
+                        .font(.system(size: 20, weight: .bold))
+                        .padding()
+                    Spacer()
+                    
+                    if shouldNavigate {
+                        NavigationLink(
+                            destination: WeatherPageView(),
+                            isActive: $shouldNavigate,
+                            label: { EmptyView() }
+                        )
+                    }
                 }
-                Spacer()
             }
-        }
+        }.navigationBarHidden(true)
     }
 }
 
