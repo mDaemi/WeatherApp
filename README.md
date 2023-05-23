@@ -27,5 +27,6 @@ Restart Functionality: After displaying the results, the progress gauge transfor
 
 # IMPLEMENTATION
 
-![Simulator Screen Recording - iPhone 14 - 2023-05-23 at 18 46 20](https://github.com/mDaemi/WeatherApp/assets/31176385/40c06a88-a16e-4982-aba8-2ef77fae3f03)
+![gif](https://github.com/mDaemi/WeatherApp/assets/31176385/a110656f-796f-4f9c-9fa9-2c02e939f111)
+
 
